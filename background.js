@@ -1,5 +1,17 @@
 blockedSites = ["https://www.youtube.com", "https://www.reddit.com"];
-blockerActive = false;
+
+let blockerActive = false;
+browser.storage.local.get("blockerActive", (result) => {
+  blockerActive = result.blockerActive;
+  if (blockerActive === undefined) blockerActive = true;
+  checkActiveTabAndBlock();
+});
+browser.storage.onChanged.addListener((changes, namespace) => {
+  if (namespace === "local" && changes.blockerActive?.newValue !== undefined) {
+    blockerActive = Boolean(changes.blockerActive.newValue);
+    checkActiveTabAndBlock();
+  }
+});
 
 function checkAndBlockTab(tab) {
   if (!blockerActive) return;
@@ -24,6 +36,8 @@ browser.tabs.onActivated.addListener((activeInfo) =>
   }, console.error),
 );
 
-browser.tabs.query({ currentWindow: true, active: true }).then((tabs) => {
-  checkAndBlockTab(tabs[0]);
-}, console.error);
+function checkActiveTabAndBlock() {
+  browser.tabs.query({ currentWindow: true, active: true }).then((tabs) => {
+    checkAndBlockTab(tabs[0]);
+  }, console.error);
+}
