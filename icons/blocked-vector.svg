@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="512" height="512" version="1.1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+ <g fill="none" stroke="#ff0000" stroke-linejoin="bevel" stroke-miterlimit="3.4">
+  <circle transform="scale(-1,1)" cx="-256" cy="256" r="208" stroke-width="48" style="paint-order:stroke fill markers"/>
+  <path d="m401.18 110.82-290.36 290.36" stroke-width="32" style="paint-order:stroke fill markers"/>
+  <text x="141.11975" y="256" font-family="Iosevka" font-size="192px" font-stretch="expanded" font-weight="500" stroke-width="48" style="line-height:1.25;paint-order:stroke fill markers" xml:space="preserve"><tspan x="141.11975" y="256" fill="#000000" stroke="none">F</tspan></text>
+  <text x="247.42432" y="397.11975" font-family="Iosevka" font-size="192px" font-stretch="expanded" font-weight="500" stroke-width="48" style="line-height:1.25;paint-order:stroke fill markers" xml:space="preserve"><tspan x="247.42432" y="397.11975" fill="#000000" stroke="none">A</tspan></text>
+ </g>
+</svg>
